@@ -11,3 +11,29 @@
 .color-filter {
     filter: invert(50%);
   }
+
+  #text-behind, #text-front, #text-behind-blur {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: 12vw;
+    font-weight: 800;
+    letter-spacing: 10px;
+    line-height: 0.8;
+  }
+  
+  .bottomText {
+    font-size: 15vw;
+  }
+  
+  #text-behind {
+    color: white;
+    z-index: 1;
+  }
+  
+  #text-behind-blur {
+    color: white;
+    filter: blur(7.5px);
+    -webkit-filter: blur(7.5px);
+    z-index: 0;
+  }
