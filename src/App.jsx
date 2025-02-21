@@ -1,9 +1,14 @@
 import React from 'react'
-import Navbar from './sections/Navbar.jsx'
+import Hero from './sections/Hero.jsx'
+import Navbar from './sections/Navbar.jsx';
+import Test from './sections/Test.jsx';
+
 export const App = () => {
   return (
-    <div >
+    <div>
       <Navbar />
+      <Hero />
+      <Test />
     </div>
   )
 }
