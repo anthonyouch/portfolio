@@ -26,12 +26,12 @@ const Projects = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <img 
-                            src="/assets/react.svg" 
+                            src="portfolio/assets/react.svg" 
                             alt="React" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
                         <img 
-                            src="/assets/tailwindcss.png" 
+                            src="portfolio/assets/tailwindcss.png" 
                             alt="Tailwind CSS" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
@@ -50,12 +50,17 @@ const Projects = () => {
                     <directionalLight position={[10, 10, 5]} />
                     <Center>
                     <Suspense fallback={null}>
-                        <group scale={0.025} position={[0, 1, 0]} rotation={[0, -0.4, 0]}>
+                        <group scale={0.025} position={[0, -1, 0]} rotation={[0, -0.4, 0]}>
                         <DemoComputer />
                         </group>
                     </Suspense>
                     </Center>
-                    <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+                    <OrbitControls 
+                        enableZoom={false}
+                        enableRotate={true}
+                        target={[0, 0, 0]}
+                        maxPolarAngle={Math.PI / 2}
+                    />
                 </Canvas>
             
             </div>
