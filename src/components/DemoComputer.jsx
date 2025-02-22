@@ -8,9 +8,18 @@ Title: CyberPunk Laptop Concept Design
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import * as THREE from 'three'
 
 const DemoComputer = (props) => {
   const { nodes, materials } = useGLTF('/models/computer.glb')
+  
+  // Create a plain black material for the screen
+  const screenMaterial = new THREE.MeshStandardMaterial({
+    color: '#000000',
+    metalness: 0.5,
+    roughness: 0.5
+  })
+
   return (
     <group {...props} dispose={null}>
       <group position={[0, 50.454, -8.888]} rotation={[-1.943, 0, -Math.PI / 2]} scale={100}>
@@ -24,7 +33,7 @@ const DemoComputer = (props) => {
           castShadow
           receiveShadow
           geometry={nodes.Cube_Screen_0.geometry}
-          material={materials.Screen}
+          material={screenMaterial}  // Use our plain black material
         />
       </group>
       <mesh

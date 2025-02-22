@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className="w-full h-screen bg-black flex justify-center items-center">
       <section className="h-7/10 w-4/5 text-white">
-        <div className="grid grid-cols-2 gap-20 w-full h-full">
+        <div className="grid grid-cols-2 gap-5 w-full h-full">
             <div className="flex flex-col justify-around h-full px-16 py-24">
                 {/* Project Title */}
                 <div className="flex flex-col gap-4">
