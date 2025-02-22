@@ -1,5 +1,8 @@
 import React from 'react'
-
+import { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { Center, OrbitControls } from '@react-three/drei'
+import DemoComputer from '../components/DemoComputer'
 const Projects = () => {
   return (
     <div className="w-full h-screen bg-black flex justify-center items-center">
@@ -40,18 +43,21 @@ const Projects = () => {
             </div>
             
             <div className="bg-neutral-900 rounded-2xl h-full">
-            <Canvas>
-                <ambientLight intensity={Math.PI} />
-                <directionalLight position={[10, 10, 5]} />
-                <Center>
-                <Suspense fallback={null}>
-                    <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                    <DemoComputer />
-                    </group>
-                </Suspense>
-                </Center>
-                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-            </Canvas>
+                <Canvas
+                camera={{ position: [0, 2, 10], fov: 45 }}
+                >
+                    <ambientLight intensity={Math.PI} />
+                    <directionalLight position={[10, 10, 5]} />
+                    <Center>
+                    <Suspense fallback={null}>
+                        <group scale={0.025} position={[0, 1, 0]} rotation={[0, -0.4, 0]}>
+                        <DemoComputer />
+                        </group>
+                    </Suspense>
+                    </Center>
+                    <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+                </Canvas>
+            
             </div>
         </div>
       </section>
