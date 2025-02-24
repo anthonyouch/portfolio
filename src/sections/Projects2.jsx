@@ -5,9 +5,9 @@ import { Center, OrbitControls } from '@react-three/drei'
 import DemoComputer from '../components/DemoComputer'
 const Projects2 = () => {
   return (
-    <div className="w-full h-screen bg-black flex justify-center items-center">
+    <div className="w-full 2h-screen sm:h-screen bg-black flex justify-center items-center">
       <section className="h-7/10 w-4/5 text-white">
-        <div className="grid grid-cols-2 gap-5 w-full h-full">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 w-full sm:h-full 2h-full">
             <div className="flex flex-col justify-around h-full px-16 py-24">
                 {/* Project Title */}
                 <div className="flex flex-col gap-4">
@@ -48,7 +48,7 @@ const Projects2 = () => {
                 </div>
             </div>
             
-            <div className="bg-neutral-900 rounded-2xl h-full">
+            <div className="bg-neutral-950 rounded-2xl h-full">
                 <Canvas
                 camera={{ position: [0, 2, 10], fov: 45 }}
                 >
