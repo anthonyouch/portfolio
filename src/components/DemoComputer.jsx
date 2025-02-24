@@ -11,14 +11,17 @@ import { useGLTF } from '@react-three/drei'
 import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
-const DemoComputer = (props) => {
+const DemoComputer = ({ screenPath = '/portfolio/assets/project1-screen.jpg', ...props }) => {
   const { nodes, materials } = useGLTF('/portfolio/models/computer.glb')
   
-  // Load texture with useLoader
-  const screenTexture = useLoader(THREE.TextureLoader, '/portfolio/assets/screen.jpg')
-  // Configure texture after loading
+  // Use the screenPath prop for the texture
+  const screenTexture = useLoader(THREE.TextureLoader, screenPath)
   screenTexture.rotation = -Math.PI/2 
   screenTexture.center.set(0.5, 0.5) 
+  
+  // Add these lines to zoom out
+  screenTexture.repeat.set(1.5, 1.5)
+  screenTexture.offset.set(0, +0.25) 
   
   return (
     <group {...props} dispose={null}>

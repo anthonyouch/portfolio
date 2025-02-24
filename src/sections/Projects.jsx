@@ -14,30 +14,41 @@ const Projects = () => {
                     <h2 className="text-4xl font-semibold">Escape The Dungeon</h2>
                     
                     {/* Description */}
-                    <p className="text-gray-400 text-xl leading-relaxed">
-                        Regnandi mi v desiderabilem Spoliare-ad-e-Medicus pacifice nisi 
-                        necessitas qui hac inducere non locorum. Typi maecenas AD-rhoncus 
-                        modestia nisi nisi-te-hofitico-pugnat dissimillimas, il sancli exaudire te 
-                        suspncta augusta doloremque sunt v iriure sint justo.
-                    </p>
+                    <div className="flex flex-col gap-4">
+                        <p className="text-gray-400 text-xl leading-relaxed">
+                            Developed a top-down rogue-like shooter with procedurally generated dungeons using Binary Space Partitioning
+                            and Random Walk algorithms. 
+                        </p>
+                        <p className="text-gray-400 text-xl leading-relaxed">
+                            Implemented AI-driven enemy pathfinding and attack mechanics, improving gameplay.
+                        </p>
+                        <p className="text-gray-400 text-xl leading-relaxed">
+                            Actively integrated comprehensive player feedback to refine game mechanics, addressing issues such as enemy pathfinding and visibility.
+                        </p>
+                    </div>
                 </div>
 
                 {/* Tech Stack and Button */}
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <img 
-                            src="portfolio/assets/react.svg" 
-                            alt="React" 
+                            src="/portfolio/assets/unity.png" 
+                            alt="Unity" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
                         <img 
-                            src="portfolio/assets/tailwindcss.png" 
-                            alt="Tailwind CSS" 
+                            src="/portfolio/assets/photoshop.png" 
+                            alt="Photoshop" 
+                            className="w-12 h-12 rounded-xl object-contain"
+                        />
+                        <img 
+                            src="/portfolio/assets/blender.png" 
+                            alt="Blender" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
                     </div>
                     <button className="text-gray-400 font-medium">
-                        <span>Github</span>
+                        <span> <a href="https://github.com/anthonyouch/escape-the-dungeon" alt="link to github" target="_blank">Github</a></span>
                     </button>
                 </div>
             </div>

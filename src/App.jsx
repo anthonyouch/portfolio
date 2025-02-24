@@ -1,17 +1,18 @@
 import React from 'react'
-import Hero from './sections/Hero.jsx'
-import Navbar from './sections/Navbar.jsx';
-import Test from './sections/Test.jsx';
-import Projects from './sections/Projects.jsx';
+import Hero from './sections/Hero'
+import Navbar from './sections/Navbar'
+import Projects from './sections/Projects'
+import Projects2 from './sections/Projects2'
 
-export const App = () => {
+const App = () => {
   return (
-    <div>
+    <main className="bg-black">
       <Navbar />
       <Hero />
       <Projects />
-    </div>
+      <Projects2 />
+    </main>
   )
 }
 
-export default App;
+export default App
