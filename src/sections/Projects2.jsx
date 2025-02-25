@@ -31,12 +31,12 @@ const Projects2 = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <img 
-                            src="/portfolio/assets/python.png" 
+                            src="/assets/python.png" 
                             alt="Python" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
                         <img 
-                            src="/portfolio/assets/lichess.png" 
+                            src="/assets/lichess.png" 
                             alt="Lichess" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
@@ -56,7 +56,7 @@ const Projects2 = () => {
                     <Center>
                     <Suspense fallback={null}>
                         <group scale={0.025} position={[0, -1, 0]} rotation={[0, -0.4, 0]}>
-                        <DemoComputer screenPath="/portfolio/assets/project2-screen.jpg" />
+                        <DemoComputer screenPath="/assets/project2-screen.jpg" />
                         </group>
                     </Suspense>
                     </Center>

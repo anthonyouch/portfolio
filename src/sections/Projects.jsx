@@ -31,17 +31,17 @@ const Projects = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <img 
-                            src="/portfolio/assets/unity.png" 
+                            src="/assets/unity.png" 
                             alt="Unity" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
                         <img 
-                            src="/portfolio/assets/photoshop.png" 
+                            src="/assets/photoshop.png" 
                             alt="Photoshop" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />
                         <img 
-                            src="/portfolio/assets/blender.png" 
+                            src="/assets/blender.png" 
                             alt="Blender" 
                             className="w-12 h-12 rounded-xl object-contain"
                         />

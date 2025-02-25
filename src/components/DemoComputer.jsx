@@ -11,8 +11,8 @@ import { useGLTF } from '@react-three/drei'
 import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
-const DemoComputer = ({ screenPath = '/portfolio/assets/project1-screen.jpg', ...props }) => {
-  const { nodes, materials } = useGLTF('/portfolio/models/computer.glb')
+const DemoComputer = ({ screenPath = '/assets/project1-screen.jpg', ...props }) => {
+  const { nodes, materials } = useGLTF('/models/computer.glb')
   
   // Use the screenPath prop for the texture
   const screenTexture = useLoader(THREE.TextureLoader, screenPath)
@@ -243,6 +243,6 @@ const DemoComputer = ({ screenPath = '/portfolio/assets/project1-screen.jpg', ..
   )
 }
 
-useGLTF.preload('/portfolio/models/computer.glb')
+useGLTF.preload('/models/computer.glb')
 
 export default DemoComputer;
