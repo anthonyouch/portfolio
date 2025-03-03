@@ -17,10 +17,10 @@ const DemoComputer = ({ screenPath = '/assets/project1-screen.jpg', ...props }) 
   // Use the screenPath prop for the texture
   const screenTexture = useLoader(THREE.TextureLoader, screenPath)
   screenTexture.rotation = -Math.PI/2 
-  screenTexture.center.set(0.5, 0.5) 
+  screenTexture.center.set(0.50, 0.5) 
   
   // Add these lines to zoom out
-  screenTexture.repeat.set(1.5, 1.5)
+  screenTexture.repeat.set(1, 1.5)
   screenTexture.offset.set(0, +0.25) 
   
   return (
@@ -244,5 +244,6 @@ const DemoComputer = ({ screenPath = '/assets/project1-screen.jpg', ...props }) 
 }
 
 useGLTF.preload('/models/computer.glb')
+
 
 export default DemoComputer;
