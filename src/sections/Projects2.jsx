@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Center, OrbitControls } from '@react-three/drei'
 import DemoComputer from '../components/DemoComputer'
+import CanvasLoader from '../components/Loading'
 const Projects2 = () => {
   return (
     <div className="w-full h-[200vh] sm:h-screen bg-black flex justify-center items-center">
@@ -54,7 +55,7 @@ const Projects2 = () => {
                     <ambientLight intensity={Math.PI} />
                     <directionalLight position={[10, 10, 5]} />
                     <Center>
-                    <Suspense fallback={null}>
+                    <Suspense fallback={<CanvasLoader />}>
                         <group scale={0.025} position={[0, -1, 0]} rotation={[0, -0.4, 0]}>
                         <DemoComputer screenPath="/assets/project2-screen.jpg" />
                         </group>
